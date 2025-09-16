@@ -35,6 +35,7 @@ int dequeue() {
         printf("Queue Underflow! Cannot dequeue\n");
         return -1;
     }
+}
 
     int item = queue[front];
 
