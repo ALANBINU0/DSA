@@ -39,7 +39,6 @@ int dequeue() {
     int item = queue[front];
 
     if (front == rear) {
-        // Only one element was present
         front = rear = -1;
     } else {
         front = (front + 1) % SIZE;
