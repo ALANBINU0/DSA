@@ -1,22 +1,19 @@
 #include <stdio.h>
 
-#define SIZE 5  // You can change this as needed
+#define SIZE 5  
 
 int queue[SIZE];
 int front = -1;
 int rear = -1;
 
-// Function to check if the queue is full
 int isFull() {
     return (front == (rear + 1) % SIZE);
 }
 
-// Function to check if the queue is empty
 int isEmpty() {
     return front == -1;
 }
 
-// Enqueue operation
 void enqueue(int value) {
     if (isFull()) {
         printf("Queue Overflow! Cannot enqueue %d\n", value);
@@ -31,9 +28,7 @@ void enqueue(int value) {
 
     queue[rear] = value;
     printf("Enqueued: %d\n", value);
-}
 
-// Dequeue operation
 int dequeue() {
     if (isEmpty()) {
         printf("Queue Underflow! Cannot dequeue\n");
@@ -52,7 +47,6 @@ int dequeue() {
     return item;
 }
 
-// Display the queue
 void display() {
     if (isEmpty()) {
         printf("Queue is empty\n");
@@ -70,7 +64,6 @@ void display() {
     printf("\n");
 }
 
-// Main function to demonstrate circular queue
 int main() {
     enqueue(10);
     enqueue(20);
@@ -82,7 +75,7 @@ int main() {
     display();
 
     enqueue(50);
-    enqueue(60);  // Should show overflow if queue is full
+    enqueue(60);  
     display();
 
     printf("Dequeued: %d\n", dequeue());
