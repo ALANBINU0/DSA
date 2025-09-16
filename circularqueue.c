@@ -19,6 +19,7 @@ void enqueue(int value) {
         printf("Queue Overflow! Cannot enqueue %d\n", value);
         return;
     }
+}
 
     if (isEmpty()) {
         front = rear = 0;
@@ -88,3 +89,4 @@ int main() {
 
     return 0;
 }
+
